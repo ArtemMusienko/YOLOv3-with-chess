@@ -2,32 +2,35 @@
 
 ## YOLOv3 with chess
 
-В данном коде используется модель  **YOLOv3**, код которой построен с нуля для детектирования шахматных фигур на шахматных досках. Более подробное описание архитектуры данной модели представлено в самом **Google Colab** файле.
+[![ru](https://img.shields.io/badge/README_на_русском-2A2C39?style=for-the-badge&logo=github&logoColor=white)](README.ru.md)  
 
-Датасет используется [этот](https://storage.yandexcloud.net/academy.ai/CV/chess_yolo.zip). Структура файла `data.yaml` в представленном архиве: 
+This code uses the **YOLOv3** model, which is built from scratch to detect chess pieces on chess boards. A more detailed description of the model's architecture can be found in the **Google Colab** file.
+
+The dataset used is [this one](https://storage.yandexcloud.net/academy.ai/CV/chess_yolo.zip). The structure of the `data.yaml` file in the provided archive is as follows:
 
     path: ../chess_yolo
     train: train/images
     val: valid/images
     test: test/images
 
-Названия меток:
+Label names:
 
-    names: 
-      0: слон
-      1: черный слон
-      2: черный король
-      3: черный конь
-      4: черная пешка
-      5: черный ферзь
-      6: черная ладья
-      7: белый слон
-      8: белый король
-      9: белый конь
-      10: белая пешка
-      11: белый ферзь
-      12: белая ладья
+    names:
+    
+    0: bishop
+    1: black bishop
+    2: black king
+    3: black knight
+    4: black pawn
+    5: black queen
+    6: black rook
+    7: white bishop
+    8: white king
+    9: white knight
+    10: white pawn
+    11: white queen
+    12: White Rook
 
-В финальной части кода демонстрируется работа модели в виде выполнения предсказаний на **4** случайных изображениях шахматных полей. 
+The final part of the code demonstrates the model's work by making predictions on **4** random images of chess boards.
 
-> Настоятельно рекомендую использовать **графический ускоритель T4** или мощнее для запуска этого кода!
+> I strongly recommend using a **T4 graphics accelerator** or more powerful to run this code!
